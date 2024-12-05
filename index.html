@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | News homepage</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+  function toggleMobileMenu() {
+    const menu = document.querySelector('.mobile-menu');
+    menu.classList.toggle('open');
+  }
+  function updateImageForMobile() {
+    const image = document.querySelector('.web3-image');
+    if (window.innerWidth <= 800) {
+        image.src = "./assets/images/image-web-3-mobile.jpg"; // Mobile-specific image
+    } else {
+        image.src = "./assets/images/image-web-3-desktop.jpg"; // Desktop image
+    }
+}
+
+window.addEventListener('resize', updateImageForMobile);
+window.addEventListener('load', updateImageForMobile);
+  </script>
+</head>
+<body>
+  <div class="main">
+    <div class="navbar">
+      <img class="logo" src="./assets/images/logo.svg">
+      <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+        <img src="./assets/images/icon-menu.svg">
+      </div>
+       <div class="mobile-menu">
+        <img src="./assets/images/icon-menu-close.svg" onclick="toggleMobileMenu()" height="30px" width="30px" style="display: block; margin-left: auto; margin-right: 0;">
+        <ul class="navbar_links2">
+          <li>Home</li>
+          <li>New</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </ul>
+       </div>
+      <ul class="navbar_links">
+        <li>Home</li>
+        <li>New</li>
+        <li>Popular</li>
+        <li>Trending</li>
+        <li>Categories</li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="content_left">
+        <img class="web3-image" src="./assets/images/image-web-3-desktop.jpg">
+        <div class="content_left_desc">
+          <div class="main_heading">
+            The Bright<br> Future of<br> Web 3.0?
+          </div>
+          <div class="main_content"> We dive into the next evolution of the web that<br> claims to put the power of the platforms back <br>into the hands of the people. 
+  But is it really <br>fulfilling its promise?<br>
+            <div class="readmore">READ MORE</div>
+          </div>
+        </div>
+      </div>
+      <div class="content_right">
+        <div class="content_right_div">
+          <div style="color:hsl(35, 77%, 62%);font-size: 40px;font-weight: 800;">New</div><br>
+          <div class="subheading">  Hydrogen VS Electric Cars</div><br>
+          <div class="subheading_description">Will hydrogen-fueled cars ever catch up to EVs?</div>
+          <hr>
+          <div class="subheading">   The Downsides of AI Artistry</div><br>
+          <div class="subheading_description">What are the possible adverse effects of on-demand AI image generation?</div>
+          <hr>
+          <div class="subheading">  Is VC Funding Drying Up?</div><br>
+          <div class="subheading_description">Private funding by VC firms is down 50% YOY. We take a look at what that means.</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer1">
+        <img src="./assets/images/image-retro-pcs.jpg"  height="150px" width="110px">
+        <div class="footer_description">
+          <div class="footer_desc_num">01</div>
+          <br>
+          <div class="footer_desc_heading">Reviving Retro PCs</div>
+          <br>
+          <div class="footer_desc">What happens when old PCs <br>are given modern upgrades?</div>
+        </div>
+      </div>
+      <div class="footer2">
+        <img src="./assets/images/image-top-laptops.jpg" height="150px" width="110px">
+        <div class="footer_description">
+          <div class="footer_desc_num">02</div>
+          <br>
+          <div class="footer_desc_heading">Top 10 Laptops of 2022</div>
+          <br>
+          <div class="footer_desc">Our best picks for various <br>needs and budgets.</div>
+        </div>
+      </div>
+      <div class="footer3">
+        <img src="./assets/images/image-gaming-growth.jpg" height="150px" width="110px">
+        <div class="footer_description">
+          <div class="footer_desc_num">03</div>
+          <br>
+          <div class="footer_desc_heading">The Growth of Gaming</div>
+          <br>
+          <div class="footer_desc">How the pandemic has sparked <br>fresh opportunities.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Ameen Muhammed</a>.
+  </div>
+</body>
+</html>
